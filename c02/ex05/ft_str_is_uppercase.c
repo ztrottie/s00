@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/20 20:10:12 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/21 15:05:37 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+int	ft_str_is_uppercase(char *str)
 {
-	char	c;
+	int	i;
+	int	answer;
 
-	c = '0';
-	while (c <= '9')
+	answer = 1;
+	i = 0;
+	if (str[i] != '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		while (str[i] != '\0')
+		{
+			if (str[i] > 'Z' || str[i] < 'A')
+				answer = answer * 0;
+			i++;
+		}
 	}
+	return (answer);
 }

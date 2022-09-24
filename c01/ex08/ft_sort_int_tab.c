@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/19 18:14:36 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/22 13:41:18 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	char	c;
+	int	i;
+	int	temp;
+	int	l;
 
-	c = '0';
-	while (c <= '9')
+	l = size;
+	i = 0;
+	while (l >= 0)
 	{
-		write(1, &c, 1);
-		c++;
+		while (i < size - 1)
+		{
+			if (tab[i] > tab[i + 1])
+			{
+				temp = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = temp;
+			}
+			i++;
+		}
+		i = 0;
+		l--;
 	}
 }

@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/18 21:22:37 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/19 13:03:20 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-	char	c;
-
-	c = '0';
-	while (c <= '9')
+	while (*str > '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		write(1, str, 1);
+		str++;
 	}
 }

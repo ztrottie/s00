@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/21 16:06:11 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	nb_char;
 
-	c = '0';
-	while (c <= '9')
+	nb_char = 0;
+	while (*str > '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		nb_char++;
+		str++;
 	}
+	return (nb_char);
 }
