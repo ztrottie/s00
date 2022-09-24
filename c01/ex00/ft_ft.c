@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/16 11:36:36 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/20 13:09:16 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+void	ft_ft(int *nbr)
 {
-	char	c;
-
-	c = '0';
-	while (c <= '9')
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	*nbr = 42;
 }

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/20 18:13:35 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/21 19:54:37 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+int	ft_str_is_alpha(char *str)
 {
-	char	c;
+	int	i;
+	int	rep;
 
-	c = '0';
-	while (c <= '9')
+	i = 0;
+	rep = 1;
+	if (str[i] != '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		while (str[i] != '\0')
+		{
+			if (str[i] <= 64 || str[i] >= 123)
+				rep = rep * 0;
+			else if (str[i] <= 96 && str[i] >= 91)
+				rep = rep * 0;
+			i++;
+		}
 	}
+	return (rep);
 }

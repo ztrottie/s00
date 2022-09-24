@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/16 13:11:34 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/21 23:04:13 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_ultimate_ft(int *********nbr)
 {
-	char	c;
-
-	c = '0';
-	while (c <= '9')
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	*********nbr = 42;
 }

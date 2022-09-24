@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/17 21:08:56 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/21 16:08:27 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int	e1;
+	int	e2;
 
-	c = '0';
-	while (c <= '9')
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	e1 = *a;
+	e2 = *b;
+	*a = e2;
+	*b = e1;
 }

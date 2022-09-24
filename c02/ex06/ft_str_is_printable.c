@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/20 20:17:30 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/20 20:30:40 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+int	ft_str_is_printable(char *str)
 {
-	char	c;
+	int	i;
+	int	answer;
 
-	c = '0';
-	while (c <= '9')
+	answer = 1;
+	i = 0;
+	if (str[i] != '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		while (str[i] != '\0')
+		{
+			if (str[i] < 32)
+				answer = answer * 0;
+			i++;
+		}
 	}
+	return (answer);
 }

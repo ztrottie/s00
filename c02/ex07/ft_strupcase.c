@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/20 20:31:14 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/20 20:43:56 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+char	*ft_strupcase(char *str)
 {
-	char	c;
+	int	i;
 
-	c = '0';
-	while (c <= '9')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, &c, 1);
-		c++;
+		if (str[i] >= 97 && str[i] <= 122)
+			str[i] = str[i] - 32;
+		i++;
 	}
+	return (str);
 }

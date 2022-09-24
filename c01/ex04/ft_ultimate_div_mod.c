@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 13:21:14 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/18 10:39:00 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/17 21:33:49 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/17 21:37:22 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	char	c;
+	int	division;
+	int	modulo;
 
-	c = '0';
-	while (c <= '9')
-	{
-		write(1, &c, 1);
-		c++;
-	}
+	division = *a / *b;
+	modulo = *a % *b;
+	*a = division;
+	*b = modulo;
 }

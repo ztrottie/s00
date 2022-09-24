@@ -6,13 +6,18 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 20:40:22 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/16 11:27:55 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/09/19 20:49:26 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
 int	ft_negatives(int nb)
 {
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (0);
+	}
 	if (nb < 0)
 	{
 		nb = nb * -1;
