@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   run_program.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/25 12:56:50 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/25 19:27:08 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	nb_char;
+char	g_collup[4];
+char	g_colldwn[4];
+char	g_rowright[4];
+char	g_rowleft[4];
+void	var_assign(char *str);
+void	ft_space_remover(char *str);
+int		check_input(char *str);
+void	script_error();
 
-	nb_char = 0;
-	while (*str > '\0')
-	{
-		nb_char++;
-		str++;
-	}
-	return (nb_char);
+void	set_program(char *str)
+{
+	int	error;
+
+	error = 1;
+	error = check_input(str);
+	if (error == 0)
+		script_error();
+	var_assign(str);
 }

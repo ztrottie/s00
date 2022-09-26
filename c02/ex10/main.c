@@ -7,9 +7,10 @@ int main()
 {
     char src[] = "asdfghhjkf";
     char dest[120];
+    unsigned int i;
 
-    ft_strlcpy(dest, src, 120);
-    printf("%s\n", dest);
-    strlcpy(dest, src, 120);
-    printf("%s\n", dest);
+    i = ft_strlcpy(dest, src, 0);
+    printf("%s\n%d\n", dest, i);
+    i = strlcpy(dest, src, 0);
+    printf("%s\n%d", dest, i);
 }
