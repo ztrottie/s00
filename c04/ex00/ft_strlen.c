@@ -5,20 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/26 14:21:48 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/26 15:09:15 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int	nb_char;
+	int	i;
 
-	nb_char = 0;
-	while (*str > '\0')
+	i = 0;
+	while (str[i])
 	{
-		nb_char++;
-		str++;
+		i++;
 	}
-	return (nb_char);
+	return (i);
 }

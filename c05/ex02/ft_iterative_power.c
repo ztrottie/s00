@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/28 23:07:29 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/10/02 00:08:39 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_iterative_power(int nb, int power)
 {
-	int	nb_char;
+	int	result;
 
-	nb_char = 0;
-	while (*str > '\0')
+	result = nb;
+	if (power < 0)
+		return (0);
+	else if (power == 0)
+		return (1);
+	else
 	{
-		nb_char++;
-		str++;
+		while (power > 1)
+		{
+			result *= nb;
+			power--;
+		}
+		return (result);
 	}
-	return (nb_char);
 }

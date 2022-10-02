@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/26 15:08:07 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/26 15:10:22 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	nb_char;
+#include <stdio.h>
+void	ft_putstr(char *str);
 
-	nb_char = 0;
-	while (*str > '\0')
-	{
-		nb_char++;
-		str++;
-	}
-	return (nb_char);
+int	main()
+{
+	char	*str = "123456789";
+
+	ft_putstr(str);
 }

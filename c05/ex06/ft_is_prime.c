@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/10/01 23:52:23 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/10/02 00:06:48 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_is_prime(int nb)
 {
-	int	nb_char;
+	int	i;
 
-	nb_char = 0;
-	while (*str > '\0')
+	i = 2;
+	if (nb < 0)
+		return (0);
+	while (i < (nb / 2))
 	{
-		nb_char++;
-		str++;
+		if ((nb % i) == 0)
+			return (0);
+		i++;
 	}
-	return (nb_char);
+	return (1);
 }

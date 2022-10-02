@@ -8,8 +8,8 @@ int main()
     char src[] = "asdfghhjk";
     char dest[120];
 
-    ft_strncpy(dest, src, 5);
+    ft_strncpy(dest, src, 0);
     printf("%s\n", dest);
-    strncpy(dest, src, 5);
+    strncpy(dest, src, 0);
     printf("%s\n", dest);
 }

@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/26 15:06:41 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/26 15:10:45 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	nb_char;
+#include <unistd.h>
 
-	nb_char = 0;
-	while (*str > '\0')
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		nb_char++;
-		str++;
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (nb_char);
 }

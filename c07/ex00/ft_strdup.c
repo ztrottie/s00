@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/30 11:37:06 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/30 11:47:34 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	nb_char;
+#include <stdlib.h>
 
-	nb_char = 0;
-	while (*str > '\0')
+char	*ft_strdup(char *src)
+{
+	char	*ptr;
+
+	ptr = (char *)malloc(sizeof(src));
+	while (*src)
 	{
-		nb_char++;
-		str++;
+		*ptr = *src;
+		src++;
 	}
-	return (nb_char);
+	return (ptr);
 }

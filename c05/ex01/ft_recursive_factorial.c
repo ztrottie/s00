@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/28 17:53:14 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/10/02 00:08:51 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_recursive_factorial(int nb)
 {
-	int	nb_char;
-
-	nb_char = 0;
-	while (*str > '\0')
-	{
-		nb_char++;
-		str++;
-	}
-	return (nb_char);
+	if (nb < 0)
+		return (0);
+	else if (nb == 1)
+		return (1);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
 }

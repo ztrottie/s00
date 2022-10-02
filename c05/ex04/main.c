@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/29 11:30:36 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/09/29 11:56:56 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	nb_char;
+#include <stdio.h>
 
-	nb_char = 0;
-	while (*str > '\0')
-	{
-		nb_char++;
-		str++;
-	}
-	return (nb_char);
+int	ft_fibonacci(int index);
+
+int	main()
+{
+	printf("%d", ft_fibonacci(4));
 }

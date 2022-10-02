@@ -5,11 +5,12 @@ char    ft_strlcpy(char *dest, char *src, unsigned int size);
 
 int main()
 {
-    char src[] = "asdfghhjkf";
-    char dest[120];
+    char src[] = "bonjour";
+    char dest[] = "salut bonjour";
+    unsigned int i;
 
-    ft_strlcpy(dest, src, 120);
-    printf("%s\n", dest);
-    strlcpy(dest, src, 120);
-    printf("%s\n", dest);
+    i = ft_strlcpy(dest, src, 10);
+    printf("%s\n%d\n", dest, i);
+    i = strlcpy(dest, src, 10);
+    printf("%s\n%d", dest, i);
 }

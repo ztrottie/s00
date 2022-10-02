@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:56 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/25 12:19:18 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/09/30 10:48:01 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/10/02 00:38:41 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_sqrt(int nb)
 {
-	int	nb_char;
+	int	i;
 
-	nb_char = 0;
-	while (*str > '\0')
+	if (nb <= 0)
+		return (0);
+	else if (nb == 1)
+		return (1);
+	i = 0;
+	while (i < 46341)
 	{
-		nb_char++;
-		str++;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	return (nb_char);
+	return (0);
 }
