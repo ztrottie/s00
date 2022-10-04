@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:57:22 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 20:54:18 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/03 12:45:36 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ void	ft_putnbr_base(int nbr, char *base);
 
 int	main()
 {
-	ft_putnbr_base(2147483647, "0123456789ABCDEF");
+	ft_putnbr_base(-2147483648, "0123456789ABCDEF");
 }

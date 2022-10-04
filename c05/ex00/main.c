@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:29:00 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/28 17:43:38 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:21:15 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@ int	ft_iterative_factorial(int nb);
 
 int	main()
 {
-	printf("%d", ft_iterative_factorial(4));
+	printf("%d", ft_iterative_factorial(0));
 }

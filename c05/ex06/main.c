@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:58:11 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/02 00:05:45 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:56:16 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_is_prime(int nb);
 
 int	main(void)
 {
-	printf("%d", ft_is_prime(13));
+	printf("%d", ft_is_prime(2));
 }

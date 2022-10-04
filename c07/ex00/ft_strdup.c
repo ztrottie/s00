@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 11:37:06 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/30 11:47:34 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/02 19:09:25 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ char	*ft_strdup(char *src)
 {
 	char	*ptr;
 
-	ptr = (char *)malloc(sizeof(src));
-	while (*src)
+	ptr = (char *)malloc(1 * sizeof(src));
+	if (*src != '\0')
 	{
-		*ptr = *src;
-		src++;
+		ptr = src;
 	}
 	return (ptr);
 }

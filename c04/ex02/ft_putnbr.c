@@ -6,44 +6,29 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:11:05 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 20:48:10 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/02 22:09:46 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	is_negative(nb)
+void	ft_putchar(char c)
 {
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		return (0);
-	}
-	else if (nb < 0)
-	{
-		nb *= -1;
-		write(1, "-", 1);
-	}
-	return (nb);
+	write(1, &c, 1);
 }
 
 void	ft_putnbr(int nb)
 {
-	int	dig[10];
-	int	i;
+	unsigned int	nbr;
 
-	i = 0;
-	nb = is_negative(nb);
-	while (nb > 0)
+	if (nb < 0)
 	{
-		dig[i] = (nb % 10) + 48;
-		nb /= 10;
-		i++;
+		nbr = nb * -1;
+		ft_putchar('-');
 	}
-	i--;
-	while (i >= 0)
-	{
-		write(1, &dig[i], 1);
-		i--;
-	}
+	else
+		nbr = nb;
+	if (nbr / 10 != 0)
+		ft_putnbr(nbr / 10);
+	ft_putchar(nbr % 10 + '0');
 }
