@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:57:17 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 20:52:52 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/02 22:07:32 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,40 +66,28 @@ int	error_base(char	*base)
 	return (n);
 }
 
-long int	is_negative(long int nb)
+void	ft_putchar(char c)
 {
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb *= -1;
-	}
-	return (nb);
+	write(1, &c, 1);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int			error;
-	long int	nb;
-	char		str[32];
-	int			pos;
+	int				error;
+	unsigned int	nb;
 
-	pos = 0;
 	error = error_base(base);
 	if (error == 0)
-	{
-		nb = (long int) nbr;
-		nb = is_negative(nb);
-		while (nb > 0)
+	{	
+		if (nbr < 0)
 		{
-			str[pos] = base[nb % ft_strlen(base)];
-			nb /= ft_strlen(base);
-			pos++;
+			nb = nbr * -1;
+			ft_putchar('-');
 		}
-		pos--;
-		while (pos >= 0)
-		{
-			write(1, &str[pos], 1);
-			pos--;
-		}
+		else
+			nb = nbr;
+		if (nb / ft_strlen(base) != 0)
+			ft_putnbr_base((nb / ft_strlen(base)), base);
+		ft_putchar(base[nb % ft_strlen(base)]);
 	}
 }

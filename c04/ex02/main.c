@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:22:57 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 20:43:33 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/03 12:41:51 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ void	ft_putnbr(int nb);
 
 int	main()
 {
-	ft_putnbr(-2147483647);
+	ft_putnbr(0);
 }

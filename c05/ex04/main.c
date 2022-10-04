@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:30:36 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/09/29 11:56:56 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:32:41 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_fibonacci(int index);
 
 int	main()
 {
-	printf("%d", ft_fibonacci(4));
+	printf("%d", ft_fibonacci(10));
 }

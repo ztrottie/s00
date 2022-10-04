@@ -6,7 +6,7 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:13:22 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 20:51:56 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/02 15:28:11 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ int	ft_atoi(char *str)
 		nb += str[i] - 48;
 		i++;
 	}
-	nb *= sign;
-	return (nb);
+	return (nb * sign);
 }

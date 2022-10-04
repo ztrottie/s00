@@ -6,13 +6,15 @@
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 11:47:42 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/01 15:55:20 by ztrottie         ###   ########.fr       */
+/*   Updated: 2022/10/02 19:10:17 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strdup(char *src);
 
 int	main()
 {
-	
+	printf("%s", ft_strdup(""));
 }
