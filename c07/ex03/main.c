@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ztrottie <zakytrottier@hotmail.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 11:47:42 by ztrottie          #+#    #+#             */
-/*   Updated: 2022/10/05 12:47:31 by ztrottie         ###   ########.fr       */
+/*   Created: 2022/10/05 19:52:02 by ztrottie          #+#    #+#             */
+/*   Updated: 2022/10/05 21:07:21 by ztrottie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*ft_strdup(char *src);
+char *ft_strjoin(int size, char **strs, char *sep);
 
 int	main()
 {
-	printf("%s", ft_strdup("lol"));
+	
 }
